@@ -5,11 +5,26 @@ and JavaScript.
 
 ## Run locally
 
+Install [Node.js](https://nodejs.org/) and open a terminal in this project. The
+development server works the same way on Windows, macOS, and Linux and does not
+require installing the npm dependencies first.
+
 ```bash
 npm run serve
 ```
 
 Then open <http://127.0.0.1:4173>.
+
+### Windows (PowerShell or Command Prompt)
+
+```powershell
+cd C:\path\to\productCatalogApp
+npm run serve
+```
+
+Keep that window open while using the catalogue. Press `Ctrl+C` to stop the
+server. If Windows Firewall asks for access, allowing **Private networks** is
+enough for local development.
 
 ## Browser tests and screenshots
 

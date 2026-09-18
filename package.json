@@ -4,7 +4,7 @@
   "private": true,
   "description": "KC Aluminium responsive product catalogue prototype",
   "scripts": {
-    "serve": "python3 -m http.server 4173",
+    "serve": "node scripts/serve.js",
     "playwright:install": "playwright install --with-deps chromium",
     "playwright:verify": "node scripts/verify-playwright.js",
     "test:e2e": "playwright test",
