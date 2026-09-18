@@ -1,0 +1,16 @@
+{
+  "name": "kc-aluminium-catalogue",
+  "version": "1.0.0",
+  "private": true,
+  "description": "KC Aluminium responsive product catalogue prototype",
+  "scripts": {
+    "serve": "python3 -m http.server 4173",
+    "playwright:install": "playwright install --with-deps chromium",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "screenshot": "playwright test tests/screenshot.spec.js --project=chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.0"
+  }
+}
