@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KC Aluminium product catalogue for aluminium profiles, plasterboard, accessories and installation tools." />
+    <title>KC Aluminium | Product Catalogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="utility"><div class="wrap"><span>Serving fabricators, contractors &amp; installers across Malaysia</span><div><a href="tel:+60380661288">+603 8066 1288</a><span class="dot">•</span><span>Mon–Sat, 8:30am–5:30pm</span></div></div></div>
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="KC Aluminium home"><span class="brand-mark">KC</span><span><b>KC ALUMINIUM</b><small>Built for better spaces</small></span></a>
+        <div class="nav-links"><a class="active" href="#top">Home</a><a href="#catalogue">Products</a><a href="#categories">Categories</a><a href="#brands">Brands</a><a href="#contact">Contact</a></div>
+        <div class="nav-actions"><button class="icon-btn" aria-label="Search" onclick="focusSearch()">⌕</button><button class="enquiry-trigger" onclick="openEnquiry()"><span>Enquiry List</span><b id="enquiryCount">2</b></button><button class="menu-btn" aria-label="Open menu">☰</button></div>
+      </nav>
+      <div class="mobile-search"><button onclick="focusSearch()">⌕ <span>Search products, SKU, size...</span></button></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span></span> MALAYSIA'S TRUSTED ALUMINIUM SUPPLIER</div>
+            <h1>Everything you need.<br /><em>Built to last.</em></h1>
+            <p>Quality aluminium profiles, building systems, accessories and professional tools — ready when your project needs them.</p>
+            <div class="hero-search-wrap">
+              <form class="hero-search" id="searchForm"><span>⌕</span><input id="mainSearch" autocomplete="off" placeholder="Search products, codes, sizes or brands..." aria-label="Search product catalogue" /><button type="submit">Search</button></form>
+              <div class="suggestions" id="suggestions"></div>
+            </div>
+            <div class="quick-search"><span>Popular:</span><button>Sliding window</button><button>Black handle</button><button>Plasterboard</button><button>Silicone</button></div>
+            <div class="hero-stats"><div><strong>1,200+</strong><span>Products</span></div><div><strong>20+</strong><span>Trusted brands</span></div><div><strong>25 Years</strong><span>Industry experience</span></div></div>
+          </div>
+          <div class="hero-art" aria-label="Architectural aluminium profile showcase">
+            <div class="blueprint-lines"></div>
+            <div class="profile p1"><i></i><i></i><i></i></div><div class="profile p2"><i></i><i></i></div><div class="profile p3"><i></i><i></i><i></i></div>
+            <div class="spec-card"><span>FEATURED SERIES</span><b>KC 90 Slimline</b><small>Sliding Door System</small><a href="#catalogue">View series →</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip"><div class="wrap"><div><span>✓</span><p><b>Ready Stock</b><small>Fast local fulfilment</small></p></div><div><span>⌁</span><p><b>Technical Support</b><small>Advice from specialists</small></p></div><div><span>♢</span><p><b>Quality Assured</b><small>Reliable product range</small></p></div><div><span>▣</span><p><b>Delivery Available</b><small>Across Klang Valley</small></p></div></div></section>
+
+      <section class="section category-section" id="categories">
+        <div class="wrap"><div class="section-head"><div><span class="kicker">SHOP BY CATEGORY</span><h2>Find what your project needs</h2><p>Explore our full range, organised to get you to the right product faster.</p></div><a href="#catalogue">View all categories <span>→</span></a></div>
+          <div class="category-grid">
+            <article class="category-card blue"><div class="category-icon profile-icon"><span></span><span></span></div><small>01</small><h3>Aluminium<br />Profiles</h3><p>Windows, doors, shopfronts, curtain walls &amp; sections</p><button data-filter="Aluminium Profiles">Explore 420 products <span>→</span></button></article>
+            <article class="category-card"><div class="category-icon board-icon"><span></span><span></span><span></span></div><small>02</small><h3>Knauf<br />Plasterboard</h3><p>Boards, metal framing &amp; complete ceiling systems</p><button data-filter="Knauf Plasterboard">Explore 85 products <span>→</span></button></article>
+            <article class="category-card"><div class="category-icon handle-icon"><span></span><i></i></div><small>03</small><h3>Door &amp; Window<br />Accessories</h3><p>Handles, locks, rollers, gaskets &amp; replacement parts</p><button data-filter="Accessories">Explore 560 products <span>→</span></button></article>
+            <article class="category-card"><div class="category-icon tool-icon"><span></span><i></i></div><small>04</small><h3>Tools &amp;<br />Installation</h3><p>Professional tools, sealants, safety &amp; supplies</p><button data-filter="Tools">Explore 180 products <span>→</span></button></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section product-section" id="catalogue">
+        <div class="wrap"><div class="section-head"><div><span class="kicker">POPULAR RIGHT NOW</span><h2>Featured products</h2></div><div class="tabs" role="tablist"><button class="active" data-tab="All">All</button><button data-tab="Aluminium Profiles">Profiles</button><button data-tab="Accessories">Accessories</button><button data-tab="Tools">Tools</button></div></div>
+          <div class="catalog-toolbar"><p id="resultCount">Showing 8 products</p><button id="filterToggle">☷ Filters</button><select id="sortSelect" aria-label="Sort products"><option>Featured first</option><option>Price: Low to high</option><option>Newest arrivals</option></select></div>
+          <div class="active-filters" id="activeFilters"></div>
+          <div class="products-layout">
+            <aside class="filters" id="filters"><div class="filter-title"><b>Filters</b><button onclick="clearFilters()">Clear all</button></div><label>Stock status</label><div class="check"><input type="checkbox" id="inStock" /><span>In stock only</span></div><label>Finish</label><div class="chips"><button data-finish="Silver">Silver</button><button data-finish="Black">Black</button><button data-finish="White">White</button><button data-finish="Natural">Natural</button></div><label>Price range</label><div class="range-row"><span>RM 0</span><span>RM 500+</span></div><input type="range" min="0" max="500" value="500" id="priceRange" /></aside>
+            <div class="product-grid" id="productGrid"></div>
+          </div>
+          <div class="empty-state" id="emptyState"><span>⌕</span><h3>No products found</h3><p>Try another keyword or clear your selected filters.</p><button onclick="clearFilters()">Clear all filters</button></div>
+        </div>
+      </section>
+
+      <section class="series-section"><div class="wrap"><div class="series-copy"><span class="kicker light">PROFILE SYSTEMS</span><h2>Built for precision.<br />Designed to perform.</h2><p>Explore our popular aluminium profile series, engineered for dependable fabrication and a refined finish.</p><a href="#catalogue">Explore all profile series →</a></div><div class="series-list"><a href="#catalogue"><small>SLIDING WINDOW</small><b>KC 38 Series</b><span>→</span></a><a href="#catalogue"><small>CASEMENT WINDOW</small><b>KC 50 Series</b><span>→</span></a><a href="#catalogue"><small>SLIDING DOOR</small><b>KC 90 Slimline</b><span>→</span></a></div></div></section>
+
+      <section class="section arrivals"><div class="wrap"><div class="section-head"><div><span class="kicker">FRESH IN STORE</span><h2>New arrivals</h2></div><a href="#catalogue">View all new arrivals →</a></div><div class="arrival-grid"><div class="arrival-feature"><span>NEW</span><div class="mini-profile"></div><div><small>KC ALUMINIUM</small><h3>Minimal Frame<br />Door System</h3><p>Clean lines. Maximum light.</p><button data-filter="Aluminium Profiles">Discover the system →</button></div></div><div class="arrival-note"><span>Professional grade</span><h3>New installation essentials</h3><p>Fresh tools, trusted sealants and everyday supplies now in stock.</p><a href="#catalogue">Shop tools &amp; supplies →</a></div></div></div></section>
+
+      <section class="brands section" id="brands"><div class="wrap"><span class="kicker">BRANDS WE STOCK</span><h2>Trusted names. Proven quality.</h2><div class="brand-row"><b>KNAUF</b><b>Ⅲ DORMAKABA</b><b>SIKA</b><b>BOSCH</b><b>Makita</b><b>3M</b></div></div></section>
+
+      <section class="contact-band" id="contact"><div class="wrap"><div><span class="kicker light">NEED HELP SOURCING A PART?</span><h2>Send us a photo.<br />We'll help you find it.</h2><p>Our experienced team knows aluminium hardware. Share a photo or drawing and we'll identify the right item.</p><a class="whatsapp" href="https://wa.me/60380661288">◉ WhatsApp our team</a></div><div class="location-card"><small>VISIT OUR SHOWROOM</small><h3>KC Aluminium<br />Trading Sdn. Bhd.</h3><p>12, Jalan Industri USJ 1/6,<br />47600 Subang Jaya, Selangor</p><p><b>Mon – Fri</b> 8:30am – 5:30pm<br /><b>Saturday</b> 8:30am – 1:00pm</p><a href="https://maps.google.com">Get directions ↗</a></div></div></section>
+    </main>
+
+    <footer><div class="wrap"><a class="brand inverse" href="#top"><span class="brand-mark">KC</span><span><b>KC ALUMINIUM</b><small>Built for better spaces</small></span></a><p>Your dependable source for aluminium and building supplies since 2001.</p><div class="footer-links"><a href="#catalogue">Products</a><a href="#categories">Categories</a><a href="#contact">About us</a><a href="#contact">FAQ</a></div><small>© 2026 KC Aluminium Trading Sdn. Bhd. All rights reserved.</small></div></footer>
+
+    <div class="drawer-backdrop" id="drawerBackdrop" onclick="closeEnquiry()"></div>
+    <aside class="enquiry-drawer" id="enquiryDrawer" aria-label="Enquiry list"><div class="drawer-head"><div><small>YOUR QUOTATION</small><h2>Enquiry list <span id="drawerCount">2 items</span></h2></div><button onclick="closeEnquiry()">×</button></div><div id="enquiryItems"></div><div class="drawer-form"><label>Your details</label><input placeholder="Name or company" /><input placeholder="Phone number" type="tel" /><textarea placeholder="Project notes, preferred finish or length..."></textarea><button class="submit-enquiry" onclick="submitEnquiry()">Submit enquiry</button><a id="waLink" href="#">◉ Send via WhatsApp</a></div></aside>
+    <div class="toast" id="toast">Added to your enquiry list</div>
+    <script src="app.js"></script>
+  </body>
+</html>
